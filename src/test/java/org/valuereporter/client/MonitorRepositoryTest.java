@@ -1,6 +1,7 @@
 package org.valuereporter.client;
 
 import org.testng.annotations.Test;
+import org.valuereporter.ObservedMethod;
 
 import static org.testng.Assert.*;
 

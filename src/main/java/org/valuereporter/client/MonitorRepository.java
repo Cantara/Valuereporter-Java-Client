@@ -2,6 +2,7 @@ package org.valuereporter.client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.valuereporter.ObservedMethod;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
