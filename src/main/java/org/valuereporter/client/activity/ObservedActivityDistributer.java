@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ObservedActivityDistributer extends ObservationDistributer {
     private static final Logger log = LoggerFactory.getLogger(ObservedActivityDistributer.class);
+    private static ObservedActivityDistributer instance = null;
 
 
     private int cacheSize = ObservationDistributer.MAX_CACHE_SIZE;
@@ -32,20 +33,39 @@ public class ObservedActivityDistributer extends ObservationDistributer {
 
     private ThreadPoolExecutor executor = null;
 
-    public ObservedActivityDistributer(String reporterHost, String reporterPort, String serviceName, int fowardInterval) {
-        super(reporterHost, reporterPort, serviceName, fowardInterval);
+    ObservedActivityDistributer(String reporterHost, String reporterPort, String serviceName, int forwardInterval) {
+        super(reporterHost, reporterPort, serviceName, forwardInterval);
+        log.info("Starting HttpObservationDistributer. reporterHost: {}, reporterPort {}, serviceName {}, forwardInterval {}", reporterHost, reporterPort, serviceName, forwardInterval);
 //        updateNextForwardAt();
         int threadPoolSize = THREAD_POOL_DEFAULT_SIZE;
         executor = new ThreadPoolExecutor(threadPoolSize,threadPoolSize, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue());
-        this.sleepPeriod = fowardInterval;
+        this.sleepPeriod = forwardInterval;
         activityRepository = ActivityRepository.getInstance();
     }
-    public ObservedActivityDistributer(String reporterHost, String reporterPort, String serviceName, int batchSize, int forwardInterval) {
+    ObservedActivityDistributer(String reporterHost, String reporterPort, String serviceName, int batchSize, int forwardInterval) {
         this(reporterHost, reporterPort, serviceName, forwardInterval);
         this.cacheSize = batchSize;
 //        updateNextForwardAt();
     }
 
+    /**
+     *
+     * @param reporterHost
+     * @param reporterPort
+     * @param serviceName
+     * @param forwardInterval max millsecond between posting updates.
+     * @return ObservedActivityDistributer
+     */
+    public static ObservedActivityDistributer getInstance(String reporterHost, String reporterPort, String serviceName, int forwardInterval) {
+        if(instance == null) {
+            instance = new ObservedActivityDistributer(reporterHost, reporterPort, serviceName, forwardInterval);
+        }
+        return instance;
+    }
+
+    public static ObservedActivityDistributer getInstance() {
+        return instance;
+    }
 
     @Override
     public void run() {
@@ -93,7 +113,7 @@ public class ObservedActivityDistributer extends ObservationDistributer {
      */
     private void forwardOutput() {
         //Forward to Valuereporter via HTTP and observed with Hystrix
-        log.trace("Forwarding ObservedMethods. Local cache size {}", observedActivities.size());
+        log.trace("Forwarding ObservedActivities. Local cache size {}", observedActivities.size());
         if (executor.getActiveCount() < executor.getMaximumPoolSize()) {
             List<ObservedActivity> activitiesToSend = new ArrayList<>(observedActivities);
             if (activitiesToSend != null && activitiesToSend.size() > 0) {

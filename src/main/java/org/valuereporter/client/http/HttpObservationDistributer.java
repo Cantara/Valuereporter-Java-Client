@@ -29,6 +29,7 @@ public class HttpObservationDistributer extends ObservationDistributer {
 
     public HttpObservationDistributer(String reporterHost, String reporterPort, String serviceName) {
         super(reporterHost, reporterPort, serviceName, MAX_WAIT_PERIOD_MS);
+        log.info("Starting HttpObservationDistributer. reporterHost: {}, reporterPort {}, serviceName {}", reporterHost, reporterPort, serviceName);
 
         int threadPoolSize = THREAD_POOL_DEFAULT_SIZE;
         executor = new ThreadPoolExecutor(threadPoolSize,threadPoolSize, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue());
