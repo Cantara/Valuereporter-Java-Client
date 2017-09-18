@@ -23,6 +23,7 @@ public class MonitorRepository {
      * @param maxSize
      */
     protected MonitorRepository(int maxSize) {
+        log.info("MonitorRepository initiated with max sixe of ObservedMethod {}", maxSize);
         observedQueue = new LinkedBlockingQueue<>(maxSize);
     }
 

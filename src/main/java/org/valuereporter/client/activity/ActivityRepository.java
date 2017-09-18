@@ -23,6 +23,7 @@ public class ActivityRepository {
      * @param maxSize
      */
     protected ActivityRepository(int maxSize) {
+        log.info("MonitorRepository initiated with max sixe of ObservedActivity {}", maxSize);
         observedQueue = new LinkedBlockingQueue<>(maxSize);
     }
 
