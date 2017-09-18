@@ -69,7 +69,7 @@ public class HttpObservationDistributer extends ObservationDistributer {
     private void forwardOutput() {
         //Forward to Valuereporter via HTTP
         log.trace("Forwarding ObservedMethods. Local cache size {}", observedMethods.size());
-//        HttpSender httpSender = new HttpSender(reporterHost, reporterPort, prefix, observedMethods);
+//        HttpSender httpSender = new HttpSender(reporterHost, reporterPort, serviceName, observedMethods);
         if (executor.getActiveCount() < executor.getMaximumPoolSize()) {
 //            executor.submit(httpSender);
             //Prepare for Hystrix

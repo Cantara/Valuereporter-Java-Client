@@ -34,7 +34,6 @@ public class ObservedActivityDistributer extends ObservationDistributer {
 
     public ObservedActivityDistributer(String reporterHost, String reporterPort, String serviceName, int fowardInterval) {
         super(reporterHost, reporterPort, serviceName, fowardInterval);
-//        this.prefix = serviceName;
 //        updateNextForwardAt();
         int threadPoolSize = THREAD_POOL_DEFAULT_SIZE;
         executor = new ThreadPoolExecutor(threadPoolSize,threadPoolSize, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue());
@@ -44,7 +43,6 @@ public class ObservedActivityDistributer extends ObservationDistributer {
     public ObservedActivityDistributer(String reporterHost, String reporterPort, String serviceName, int batchSize, int forwardInterval) {
         this(reporterHost, reporterPort, serviceName, forwardInterval);
         this.cacheSize = batchSize;
-//        this.maxWaitInterval = forwardInterval;
 //        updateNextForwardAt();
     }
 

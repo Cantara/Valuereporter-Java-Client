@@ -21,8 +21,8 @@ public class MonitorReporter {
         ActivityRepository.getInstance().observed(observedActivity);
     }
 
-    public static void startHttpReporter(String reporterHost, int reporterPort, String reporterPrefix) {
-        log.info("Init Http reporter to host {}, port {}, prefix {}", reporterHost, reporterPort, reporterPrefix);
+    public static void startHttpReporter(String reporterHost, int reporterPort, String serviceName) {
+        log.info("Init Http reporter to host {}, port {}, serviceName {}", reporterHost, reporterPort, serviceName);
         log.warn("Not Implemented http reporter");
         MonitorRepository.getInstance();
 
