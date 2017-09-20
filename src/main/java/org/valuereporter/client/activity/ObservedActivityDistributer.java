@@ -63,6 +63,13 @@ public class ObservedActivityDistributer extends ObservationDistributer {
         return instance;
     }
 
+    public static ObservedActivityDistributer getInstance(String reporterHost, String reporterPort, String serviceName, int cacheSize, int forwardInterval) {
+        if(instance == null) {
+            instance = new ObservedActivityDistributer(reporterHost, reporterPort, serviceName, cacheSize,forwardInterval);
+        }
+        return instance;
+    }
+
     public static ObservedActivityDistributer getInstance() {
         return instance;
     }
