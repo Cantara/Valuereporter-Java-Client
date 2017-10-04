@@ -1,12 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>org.valuereporter</groupId>
   <artifactId>valuereporter-java-client</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-
   <name>valuereporter-java-client</name>
   <url>http://www.valuereporter.org</url>
   <developers>
@@ -48,7 +46,7 @@
 
 
   <properties>
-    <valuereporter.version>1.0-ALPHA-1</valuereporter.version>
+    <valuereporter.sdk.version>1.0.1-SNAPSHOT</valuereporter.sdk.version>
     <slf4j.version>1.7.12</slf4j.version>
     <!--<jersey.version>2.8</jersey.version>-->
     <!--<metrics.version>3.0.1</metrics.version>-->
@@ -104,7 +102,7 @@
     <dependency>
       <groupId>org.valuereporter</groupId>
       <artifactId>valuereporter-java-sdk</artifactId>
-      <version>${valuereporter.version}</version>
+      <version>${valuereporter.sdk.version}</version>
     </dependency>
     <!-- Use Hystrix when dealing with connections -->
     <dependency>
