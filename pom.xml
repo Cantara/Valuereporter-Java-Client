@@ -46,7 +46,7 @@
 
 
     <properties>
-        <valuereporter.sdk.version>1.0.10</valuereporter.sdk.version>
+        <valuereporter.sdk.version>1.0.12</valuereporter.sdk.version>
         <slf4j.version>1.7.12</slf4j.version>
         <!--<jersey.version>2.8</jersey.version>-->
         <!--<metrics.version>3.0.1</metrics.version>-->
