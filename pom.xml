@@ -15,7 +15,7 @@
                 <role>Developer</role>
             </roles>
             <organization>Cantara</organization>
-            <organizationUrl>http://wiki.cantara.no/</organizationUrl>
+            <organizationUrl>https://wiki.cantara.no/</organizationUrl>
         </developer>
     </developers>
     <parent>
@@ -31,22 +31,9 @@
       <tag>HEAD</tag>
   </scm>
 
-    <repositories>
-        <repository>
-            <id>cantara-releases</id>
-            <name>Cantara Release Repository</name>
-            <url>https://mvnrepo.cantara.no/content/repositories/releases/</url>
-        </repository>
-        <repository>
-            <id>cantara-snapshots</id>
-            <name>Cantara Snapshot Repository</name>
-            <url>https://mvnrepo.cantara.no/content/repositories/snapshots/</url>
-        </repository>
-    </repositories>
-
 
     <properties>
-        <valuereporter.sdk.version>1.0.12</valuereporter.sdk.version>
+        <valuereporter.sdk.version>1.0.18</valuereporter.sdk.version>
         <slf4j.version>1.7.30</slf4j.version>
         <!--<jersey.version>2.8</jersey.version>-->
         <!--<metrics.version>3.0.1</metrics.version>-->
@@ -210,4 +197,19 @@
         </dependency>
 
     </dependencies>
+    
+    
+    <repositories>
+        <repository>
+            <id>cantara-releases</id>
+            <name>Cantara Release Repository</name>
+            <url>https://mvnrepo.cantara.no/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>cantara-snapshots</id>
+            <name>Cantara Snapshot Repository</name>
+            <url>https://mvnrepo.cantara.no/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
 </project>
