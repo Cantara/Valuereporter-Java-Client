@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.valuereporter</groupId>
     <artifactId>valuereporter-java-client</artifactId>
-    <version>1.8.2</version>
+    <version>1.8.3-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>valuereporter-java-client</name>
     <url>http://www.valuereporter.org</url>
