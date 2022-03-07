@@ -28,13 +28,12 @@
         <developerConnection>scm:git:ssh://git@github.com/cantara/Valuereporter-Java-Client.git</developerConnection>
         <connection>scm:git:https://github.com/cantara/Valuereporter-Java-Client.git</connection>
         <url>https://github.com/cantara/Valuereporter-Java-Client</url>
-      <tag>valuereporter-java-client-1.8.2</tag>
   </scm>
 
 
     <properties>
-        <valuereporter.sdk.version>1.10.0</valuereporter.sdk.version>
-         <java.version>1.8</java.version>
+        <valuereporter.sdk.version>1.10.1</valuereporter.sdk.version>
+        <java.version>1.8</java.version>
         <slf4j.version>1.7.36</slf4j.version>
         <!--<jersey.version>2.8</jersey.version>-->
         <!--<metrics.version>3.0.1</metrics.version>-->
