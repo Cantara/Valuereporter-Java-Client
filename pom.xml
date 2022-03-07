@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.valuereporter</groupId>
     <artifactId>valuereporter-java-client</artifactId>
-    <version>1.8.4-SNAPSHOT</version>
+    <version>1.10.0</version>
     <packaging>jar</packaging>
     <name>valuereporter-java-client</name>
     <url>http://www.valuereporter.org</url>
@@ -28,7 +28,7 @@
         <developerConnection>scm:git:ssh://git@github.com/cantara/Valuereporter-Java-Client.git</developerConnection>
         <connection>scm:git:https://github.com/cantara/Valuereporter-Java-Client.git</connection>
         <url>https://github.com/cantara/Valuereporter-Java-Client</url>
-      <tag>valuereporter-java-client-1.8.2</tag>
+      <tag>valuereporter-java-client-1.10.0</tag>
   </scm>
 
 
