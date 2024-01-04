@@ -33,7 +33,7 @@
 
 
     <properties>
-        <valuereporter.sdk.version>1.11.13</valuereporter.sdk.version>
+        <valuereporter.sdk.version>1.11.14</valuereporter.sdk.version>
         <java.version>1.8</java.version>
         <slf4j.version>2.0.10</slf4j.version>
         <!--<jersey.version>2.8</jersey.version>-->
