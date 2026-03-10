@@ -1,0 +1,21 @@
+id: valuereporter-java-client
+name: Valuereporter Java Client
+version: 1.11.1-SNAPSHOT
+description: |
+  Lightweight Java HTTP client for sending activity data to the Valuereporter
+  service. Used by services that want to report custom events and metrics without
+  the full agent instrumentation.
+units:
+  - id: reporter-client
+    name: Reporter Client
+    type: library
+    description: HTTP client for POSTing activity records to the Valuereporter REST API.
+    path: src/main/java/org/valuereporter
+  - id: activity-model
+    name: Activity Model
+    type: component
+    description: Activity and ObservedActivity data types used for event serialisation.
+  - id: retry
+    name: Retry
+    type: component
+    description: Resilient async reporting with exponential backoff and retry on failure.
