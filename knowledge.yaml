@@ -1,3 +1,17 @@
+kcp_version: "0.21"
+updated: "2026-06-20"
+language: en
+license: "Apache-2.0"
+indexing: private
+temporal:
+  valid_from: "2026-03-10"
+signing:
+  scheme: ed25519
+  scope: this-manifest
+  public_key: "MCowBQYDK2VwAyEAuipgusnqU9vjf3p2yPVLD/DmERT6tBbLOqEETdxAhMU="
+  signature: "https://raw.githubusercontent.com/Cantara/Valuereporter-java-Client/master/knowledge.yaml.sig"
+not_for: []
+
 id: valuereporter-java-client
 name: Valuereporter Java Client
 version: 1.11.1-SNAPSHOT
@@ -11,11 +25,20 @@ units:
     type: library
     description: HTTP client for POSTing activity records to the Valuereporter REST API.
     path: src/main/java/org/valuereporter
+      content_hash:
+        algorithm: sha256
+        value: ""
   - id: activity-model
     name: Activity Model
     type: component
     description: Activity and ObservedActivity data types used for event serialisation.
+      content_hash:
+        algorithm: sha256
+        value: ""
   - id: retry
     name: Retry
     type: component
     description: Resilient async reporting with exponential backoff and retry on failure.
+      content_hash:
+        algorithm: sha256
+        value: ""
